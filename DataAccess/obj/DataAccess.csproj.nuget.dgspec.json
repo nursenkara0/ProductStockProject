@@ -46,6 +46,22 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.27, )"
@@ -55,6 +71,22 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.27, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.22.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.22.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.15, )"
             }
           },
           "imports": [

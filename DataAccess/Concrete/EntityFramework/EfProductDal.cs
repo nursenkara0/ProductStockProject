@@ -13,6 +13,6 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfProductDal : EfEntityRepositoryBase<Product, ProductStockContext>, IProductDal
     {
-       
+
     }
 }

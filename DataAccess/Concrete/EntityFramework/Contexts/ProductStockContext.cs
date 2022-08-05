@@ -1,5 +1,6 @@
 ﻿using Core.Entities.Concrete;
 using Entities.Concrete;
+using Entities.Configurations;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -18,13 +19,17 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
+            #region Project
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderConfiguration());
+            #endregion
         }
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderProduct> OrderProducts { get; set; }
         public DbSet<OperationClaim> OperationClaims { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
